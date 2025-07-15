@@ -24,8 +24,8 @@ def clickx4():
 
 def getx2clicks():
     global totalclicks
-    if totalclicks >= 10:
-        totalclicks -= 10
+    if totalclicks >= 100:
+        totalclicks -= 100
         button.config(command=clickx2)
         buttonx2.config(command=getx4clicks, text="Click Me To Get X4 Clicks!(300)")
         label.config(text=f"{totalclicks}")
@@ -33,8 +33,8 @@ def getx2clicks():
         print("not enough money")
 def getx4clicks():
     global totalclicks
-    if totalclicks >= 15:
-        totalclicks -= 15
+    if totalclicks >= 300:
+        totalclicks -= 300
         button.config(command=clickx4)
         buttonx2.config(state=DISABLED,text="",font=("Arial",1))
         label.config(text=f"{totalclicks}")
