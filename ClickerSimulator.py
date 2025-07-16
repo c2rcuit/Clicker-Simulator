@@ -2,7 +2,6 @@ from tkinter import *
 import time
 
 totalclicks = 0
-cat = None
 
 autoclicker_enabled = False
 
@@ -62,15 +61,13 @@ def getautoclicker():
         autoclicker()
 
 def finishgame():
-    global totalclicks, cat, autoclicker_enabled
+    global totalclicks, autoclicker_enabled
     if totalclicks >= 5000:
         if cat is None:
-            cat = PhotoImage(file="funnypicture.png")
             label.config(text="Thank You For Playing!")
             button.config(fg="black")
             button.config(font=("Arial",30))
             button.config(state=DISABLED)
-            buttonx2.config(image=cat)
             buttonx2.config(state=DISABLED, text="", font=("Arial", 50))
             buttonauto.config(state=DISABLED, text=" ", font=("Arial",0))
             autoclicker_enabled = False
